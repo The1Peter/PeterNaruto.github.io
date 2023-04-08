@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>白白白不白</title>
-</head>
-<body>
-<div>
-hello world     
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>表单</title>
+        <style>
+            form{
+                width:50vw;
+                height: 50vh;
+                margin: 0 auto;
+                background-color: skyblue;
+
+            }
+            input[type='text']{
+                width: 100%;
+                height: 100px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!-- <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <input type="submit" value="搜索">
+    </form> -->
+        <form action="http://localhost:8080/test"
+                method="post" enctype="multipart/form-data">
+            <input type="text" name="username">
+            <hr>
+            <input type="password" name="password">
+            <hr>
+            <input type="hidden" name="id" value="1">
+            <hr>
+            <hr>
+            <input type="date" name="birthday">
+            <hr>
+            <input type="radio" name="sex" value="男" checked>男
+            <input type="radio" name="sex" value="女" >女
+            <hr>
+            <input type="checkbox" name="fav" value="歌唱">歌唱
+            <input type="checkbox" name="fav" value="逛街">逛街
+            <input type="checkbox" name="fav" value="篮球">篮球
+            <hr>
+            <input type="file" name="file"> 
+            <hr>
+            <input type="submit" value="提交">
+
+
+        </form>
+    </body>
 </html>
