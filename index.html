@@ -1,54 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>表单</title>
         <style>
-            form{
-                width:50vw;
-                height: 50vh;
-                margin: 0 auto;
-                background-color: skyblue;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            }
-            input[type='text']{
-                width: 100%;
-                height: 100px;
-            }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        </style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .nav a:hover {
+            color: #ff0000;
+        }
+
+        .banner {
+            height: 600px;
+            background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8amF2YXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner h1 {
+            color: #ffffff;
+            font-size: 72px;
+            text-align: center;
+            line-height: 600px;
+        }
+
+        .main {
+            padding: 40px 0;
+        }
+
+        .main h2 {
+            color: #ff0000;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .main .card {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .main .card img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .main .card .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .main .card .content h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .main .card .content p {
+            color: #cccccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .main .card .content a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff0000;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .main .card .content a:hover {
+            background-color:#e60000 ;
+        }
+
+        .footer {
+           background-color:#262626 ;
+           padding-top :40 px ;
+           padding-bottom :40 px ;
+           text-align :center ;
+           color :#ffffff ;
+       }
+    </style>
     </head>
     <body>
-        <!-- <form action="https://www.baidu.com/s">
-        <input type="text" name="wd">
-        <input type="submit" value="搜索">
-    </form> -->
-        <form action="http://localhost:8080/test"
-                method="post" enctype="multipart/form-data">
-            <input type="text" name="username">
-            <hr>
-            <input type="password" name="password">
-            <hr>
-            <input type="hidden" name="id" value="1">
-            <hr>
-            <hr>
-            <input type="date" name="birthday">
-            <hr>
-            <input type="radio" name="sex" value="男" checked>男
-            <input type="radio" name="sex" value="女" >女
-            <hr>
-            <input type="checkbox" name="fav" value="歌唱">歌唱
-            <input type="checkbox" name="fav" value="逛街">逛街
-            <input type="checkbox" name="fav" value="篮球">篮球
-            <hr>
-            <input type="file" name="file"> 
-            <hr>
-            <input type="submit" value="提交">
-
-
-        </form>
-    </body>
-</html>
+        <div class="container">
+            <div class="header">
+                <div class="logo">Java 博客</div>
+                <ul class="nav">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">文章</a></li>
+                    <li><a href="#">教程</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <h1>欢迎来到 Java 博客</h1>
+            </div>
+            <div class="main">
+                <h2>最新文章</h2>
+                <div class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8amF2YXxlbnwwf>HwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="">
+                    <div class="content">
+                        <h3>Java 语言</h3>
+                        <p>Java
+                            是一种面向对象的编程语言，它具有面向对象和函数式编程的特性，是一种通用的、高级的、面向对象的、分布式的、解释型的、健壮的、安全的、多线程的、动态的语言。</p>
+                        <a href="#">阅读更多</a>
+                    </div>
+                </div>
+            </body>
+        </html>
